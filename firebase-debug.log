@@ -1,0 +1,101 @@
+[debug] [2024-01-05T18:58:14.049Z] ----------------------------------------------------------------------
+[debug] [2024-01-05T18:58:14.050Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Benja\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting --debug
+[debug] [2024-01-05T18:58:14.051Z] CLI Version:   12.7.0
+[debug] [2024-01-05T18:58:14.051Z] Platform:      win32
+[debug] [2024-01-05T18:58:14.051Z] Node Version:  v18.18.2
+[debug] [2024-01-05T18:58:14.052Z] Time:          Fri Jan 05 2024 11:58:14 GMT-0700 (Mountain Standard Time)
+[debug] [2024-01-05T18:58:14.052Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-05T18:58:14.121Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-05T18:58:14.124Z] > authorizing via signed-in user (anemoiapictures@gmail.com)
+[debug] [2024-01-05T18:58:14.125Z] [iam] checking project firelog-2df0e for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-01-05T18:58:14.127Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/firelog-2df0e:testIamPermissions [none]
+[debug] [2024-01-05T18:58:14.127Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/firelog-2df0e:testIamPermissions x-goog-quota-user=projects/firelog-2df0e
+[debug] [2024-01-05T18:58:14.128Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/firelog-2df0e:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-05T18:58:14.504Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/firelog-2df0e:testIamPermissions 200
+[debug] [2024-01-05T18:58:14.505Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/firelog-2df0e:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-05T18:58:14.506Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/firelog-2df0e [none]
+[debug] [2024-01-05T18:58:14.810Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/firelog-2df0e 200
+[debug] [2024-01-05T18:58:14.811Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/firelog-2df0e {"projectId":"firelog-2df0e","projectNumber":"463037542780","displayName":"FireLog","name":"projects/firelog-2df0e","resources":{"hostingSite":"firelog-2df0e","realtimeDatabaseInstance":"firelog-2df0e-default-rtdb"},"state":"ACTIVE","etag":"1_2481d9fb-6997-44e1-bfd3-8f9f8b1798bb"}
+[info] 
+[info] === Deploying to 'firelog-2df0e'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-01-05T18:58:14.817Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/firelog-2df0e/versions [none]
+[debug] [2024-01-05T18:58:14.817Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/firelog-2df0e/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-01-05T18:58:16.039Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/firelog-2df0e/versions 200
+[debug] [2024-01-05T18:58:16.040Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/firelog-2df0e/versions {"name":"projects/463037542780/sites/firelog-2df0e/versions/7dbe1af46e83cbf0","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[firelog-2df0e]: beginning deploy... 
+[info] i  hosting[firelog-2df0e]: found 44 files in dist/spa 
+[debug] [2024-01-05T18:58:16.053Z] [hosting] uploading with 200 concurrency
+[debug] [2024-01-05T18:58:16.063Z] [hosting] hash cache [ZGlzdFxzcGE] stored for 44 files
+[debug] [2024-01-05T18:58:16.064Z] [hosting][hash queue][FINAL] {"max":2,"min":0,"avg":0,"active":0,"complete":44,"success":44,"errored":0,"retried":0,"total":44,"elapsed":9}
+[debug] [2024-01-05T18:58:16.064Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/463037542780/sites/firelog-2df0e/versions/7dbe1af46e83cbf0:populateFiles [none]
+[debug] [2024-01-05T18:58:16.065Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/463037542780/sites/firelog-2df0e/versions/7dbe1af46e83cbf0:populateFiles {"files":{"/favicon.ico":"19f515c282a02319e98f59fe00523099fdf73ce3e06b48492354b57cdf5cb5ff","/index.html":"1cb5e8a274493e03f321686ff0d2b772f90c58d52b9dc6e9b3843601749f9077","/assets/ErrorNotFound.e7cf5b4c.js":"7e3bd1716d13ba6da5003b2fe640a38c39e08cb1f3f70e4b55945ab40a4afe55","/assets/FireLog-Logo_Color.f7b60688.png":"caa0f3509298fa2fcc9f32d3c5d558e26945a41d99c83b414c9b4b0b08756565","/assets/FireLog-Logo_Color_Text.3f789f9c.png":"418903c34676078b1746d141e5412eb1083ee00db45c1263e9d860d8413adb33","/assets/FireLog-Logo_White_Text.366d1fb1.png":"d006bf79d90f933508df85b17eaa1d933b5e1ca4adccdeb454e90f8809489f78","/assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNa.fd84f88b.woff":"1ffbcd5ac0a466a90b94d48bcc4789a9e536e3ed84280530228b29a3c8c92f30","/assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.4a4dbc62.woff2":"6dcf907b4f9910f9b6259c6b7b1d82a42e2d140b068212f74115179ca9ac2ba6","/assets/index.4244c1c3.js":"f704a1ac1a2ed1eba2960f907a1e8526a4410dc1e665ff5084877d580a000de1","/assets/index.c85fa3d0.css":"cbd293afef7f72909b790c2df9ce67d5e6daa0d58adf61f66f5b320c3d3f17f9","/assets/KFOkCnqEu92Fr1MmgVxIIzQ.34e9582c.woff":"e187935867123b35d124bdcb50d055beacf77ab1faa4a1921a043ca821099d07","/assets/KFOlCnqEu92Fr1MmEU9fBBc-.9ce7f3ac.woff":"112014778cee35b534b468c55c6b47bd0ce07d3f136f43255733e351cff5dc8e","/assets/KFOlCnqEu92Fr1MmSU5fBBc-.bf14c7d7.woff":"16bb244c5b7182277b2f443e2216f024588eb4ac8d958aea7b88507f2d3d6e55","/assets/KFOlCnqEu92Fr1MmWUlfBBc-.e0fd57c0.woff":"0e345dc03075026e6ee24e96ebef539905a6d54ab47a114f0574603b9bc10244","/assets/KFOlCnqEu92Fr1MmYUtfBBc-.f6537e32.woff":"5af67f9b56d4fe0cc0454f5b983884330ff3cf79c2f131f3a9e724af57dba868","/assets/KFOmCnqEu92Fr1Mu4mxM.f2abf7fb.woff":"595988c2e008cc7663d539a03b0de1b86d567af7b814dd15457349d7fafa3527","/assets/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsLjBuVY.2d2b16e4.woff2":"82f792f563cbb565b331e025fe2b61106377fbcc1ce99966b4113bb2f9a70e20","/assets/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1p-p_4MrImHCIJIZrDCvHeel.e5120202.woff":"bf1a113e86367e55bd969e6d188da8c1676b0d8e940749d512650f7cb250422f","/assets/MainLayout.5f3e7f8d.js":"3d2cc572b04161a71ae0772a8c55b688a66f69daf1ed82e7000ffa27473e88ad","/assets/navguard.3064c8c9.js":"69d75e0a69e2c3ffbd48ff7dc7d156d492eb01bc4002c39449737a8b00cb91ae","/assets/PageAuth.9626a4d7.js":"f2bc6c6102def0187f30a459217d2d4435f08cd3cf8359ea4ff391387fbe47de","/assets/PageLogInventory.4715ee9b.css":"ddfdd79191bd19e0f19653c0ec60840612569036fb93f918b6e39d71a65ad9be","/assets/PageLogInventory.9349fcd9.js":"317345654710bf7c029ff720111bb554687ab1dcf442fa53e6c1ac2c0e4f325d","/assets/PageLogItem.340c05ce.css":"77eb2e232578904b521fe74f22e00076268c7c3871bde20a4b84972755412b18","/assets/PageLogItem.d1a30e78.js":"b6106936600e13f117ff537f3f2e66e27e24228e74cdadc4caf7e139452991ed","/assets/QInput.212b08a2.js":"5ba831ad920b0209eddbf8f4f183fbf1875986b767208ff329baf09152304f0a","/assets/QList.f544e7b2.js":"0af0324dcfbf98f0dddaf59070a045f232f963a0681e2c1a9da5d402a3dd46cc","/assets/QPage.5b5b55c3.js":"afdcc153bb2fdc104ae0389ab476a42f8202716b09ccb87d4c76ab65b04ac271","/assets/use-dark.356ea450.js":"5ce53d5b746fa7791af0b7335110d4c24eeeea882c57560bff8eee976fecc9c3","/icons/apple-icon-120x120.png":"e34044309bb899a1871ba926ef7be91abfcd1727486feba175e1897cd2e65f03","/icons/apple-icon-152x152.png":"30985edc6b91be010597c0c7058f8157a9b94a0ae97c26dceeaa30594680a190","/icons/apple-icon-167x167.png":"4aa787326e4481f43e86f048fcf095941ddafe7e9a50cc2c4352d2f783b079ea","/icons/apple-icon-180x180.png":"d1077bbaf19a9699d960d6c7ab47547f14f83ce276935a81d5b61386c374bdf0","/icons/favicon-128x128.png":"c6e9fd45db2c50c0ce234a3c845498e05640158a8268df61d4ddbecdc61b8995","/icons/favicon-16x16.png":"2957c6d3f4dbf6778db6ae2e0e6737f6c4bd07f7b504d101d81de2a6fb57b3b4","/icons/favicon-32x32.png":"fa10146a76ab2b54c831c385967e0f21b9b321ee7a6a24f7d409e4d6f4d60b6f","/icons/favicon-96x96.png":"70ccefa10e34389c7cf986ce465d6d27832a98ab1792b8ed51acc7f28369bc03","/icons/icon-128x128.png":"c6e9fd45db2c50c0ce234a3c845498e05640158a8268df61d4ddbecdc61b8995","/icons/icon-192x192.png":"1236c2913aa4ea7c1cddcdf363487628a6abd27ad52366efa2f335ef028a28c4","/icons/icon-256x256.png":"06e40b8075ad7e0f5d3bae017d6c871c1c5c51d57dfc51149e81746bc250db29","/icons/icon-384x384.png":"6cdd66d25fe9787fe06a9fdb5dac1aa93902ff65fb1ca69e33d4e7c2a1ee36f4","/icons/icon-512x512.png":"bcb5f0c32a434b37809a68e0151c5323cb864bd1468b2eb592fe51c0deaa62a7","/icons/ms-icon-144x144.png":"821c7a336278eb8a2dd33b6083319e52aa7392a6d3ebb029f6ee1b60939a707d","/icons/safari-pinned-tab.svg":"25c7c5e3e2a21dde84a58b38ef9b0d59102ebc30c90119d5841717493e6005ed"}}
+[debug] [2024-01-05T18:58:16.653Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/463037542780/sites/firelog-2df0e/versions/7dbe1af46e83cbf0:populateFiles 200
+[debug] [2024-01-05T18:58:16.654Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/463037542780/sites/firelog-2df0e/versions/7dbe1af46e83cbf0:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/firelog-2df0e/versions/7dbe1af46e83cbf0/files"}
+[debug] [2024-01-05T18:58:16.655Z] [hosting][populate queue][FINAL] {"max":598,"min":598,"avg":598,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":598}
+[debug] [2024-01-05T18:58:16.655Z] [hosting] uploads queued: 0
+[debug] [2024-01-05T18:58:16.655Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1704481096655}
+[info] i  hosting: upload complete 
+[info] +  hosting[firelog-2df0e]: file upload complete 
+[debug] [2024-01-05T18:58:16.657Z] [hosting] deploy completed after 615ms
+[debug] [2024-01-05T18:58:16.657Z] [
+  {
+    "config": {
+      "public": "dist/spa",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "headers": [
+        {
+          "source": "/**",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "no-cache, no-store, must-revalidate"
+            }
+          ]
+        },
+        {
+          "source": "**/*.@(jpg|jpeg|gif|png|svg|webp|js|css|eot|otf|ttf|ttc|woff|woff2|font.css)",
+          "headers": [
+            {
+              "key": "Cache-Control",
+              "value": "max-age=604800"
+            }
+          ]
+        }
+      ],
+      "site": "firelog-2df0e"
+    },
+    "version": "projects/463037542780/sites/firelog-2df0e/versions/7dbe1af46e83cbf0"
+  }
+]
+[info] i  hosting[firelog-2df0e]: finalizing version... 
+[debug] [2024-01-05T18:58:16.661Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/firelog-2df0e/versions/7dbe1af46e83cbf0 updateMask=status%2Cconfig
+[debug] [2024-01-05T18:58:16.662Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/firelog-2df0e/versions/7dbe1af46e83cbf0 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}],"headers":[{"glob":"/**","headers":{"Cache-Control":"no-cache, no-store, must-revalidate"}},{"glob":"**/*.@(jpg|jpeg|gif|png|svg|webp|js|css|eot|otf|ttf|ttc|woff|woff2|font.css)","headers":{"Cache-Control":"max-age=604800"}}]}}
+[debug] [2024-01-05T18:58:17.426Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/firelog-2df0e/versions/7dbe1af46e83cbf0 200
+[debug] [2024-01-05T18:58:17.427Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/firelog-2df0e/versions/7dbe1af46e83cbf0 {"name":"projects/463037542780/sites/firelog-2df0e/versions/7dbe1af46e83cbf0","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/**"},{"headers":{"Cache-Control":"max-age=604800"},"glob":"**/*.@(jpg|jpeg|gif|png|svg|webp|js|css|eot|otf|ttf|ttc|woff|woff2|font.css)"}],"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-01-05T18:58:14.611406Z","createUser":{"email":"Anemoiapictures@gmail.com"},"finalizeTime":"2024-01-05T18:58:16.742091Z","finalizeUser":{"email":"Anemoiapictures@gmail.com"}}
+[debug] [2024-01-05T18:58:17.431Z] [hosting] finalized version for firelog-2df0e:[object Object]
+[info] +  hosting[firelog-2df0e]: version finalized 
+[info] i  hosting[firelog-2df0e]: releasing new version... 
+[debug] [2024-01-05T18:58:17.433Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/firelog-2df0e/channels/live/releases versionName=projects%2F463037542780%2Fsites%2Ffirelog-2df0e%2Fversions%2F7dbe1af46e83cbf0
+[debug] [2024-01-05T18:58:17.434Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/firelog-2df0e/channels/live/releases {}
+[debug] [2024-01-05T18:58:18.178Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/firelog-2df0e/channels/live/releases 200
+[debug] [2024-01-05T18:58:18.179Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/firelog-2df0e/channels/live/releases {"name":"projects/463037542780/sites/firelog-2df0e/channels/live/releases/1704481096768000","version":{"name":"projects/463037542780/sites/firelog-2df0e/versions/7dbe1af46e83cbf0","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/**"},{"headers":{"Cache-Control":"max-age=604800"},"glob":"**/*.@(jpg|jpeg|gif|png|svg|webp|js|css|eot|otf|ttf|ttc|woff|woff2|font.css)"}],"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-01-05T18:58:14.611406Z","createUser":{"email":"Anemoiapictures@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIDGJFQ3CPM6ujuirJeD1czM7Rmv-ElcFer8HSFfrtHjA"},"finalizeTime":"2024-01-05T18:58:16.742091Z","finalizeUser":{"email":"Anemoiapictures@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIDGJFQ3CPM6ujuirJeD1czM7Rmv-ElcFer8HSFfrtHjA"}},"type":"DEPLOY","releaseTime":"2024-01-05T18:58:16.768Z","releaseUser":{"email":"Anemoiapictures@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIDGJFQ3CPM6ujuirJeD1czM7Rmv-ElcFer8HSFfrtHjA"}}
+[debug] [2024-01-05T18:58:18.182Z] [hosting] release: {"name":"projects/463037542780/sites/firelog-2df0e/channels/live/releases/1704481096768000","version":{"name":"projects/463037542780/sites/firelog-2df0e/versions/7dbe1af46e83cbf0","status":"FINALIZED","config":{"headers":[{"headers":{"Cache-Control":"no-cache, no-store, must-revalidate"},"glob":"/**"},{"headers":{"Cache-Control":"max-age=604800"},"glob":"**/*.@(jpg|jpeg|gif|png|svg|webp|js|css|eot|otf|ttf|ttc|woff|woff2|font.css)"}],"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2024-01-05T18:58:14.611406Z","createUser":{"email":"Anemoiapictures@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIDGJFQ3CPM6ujuirJeD1czM7Rmv-ElcFer8HSFfrtHjA"},"finalizeTime":"2024-01-05T18:58:16.742091Z","finalizeUser":{"email":"Anemoiapictures@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIDGJFQ3CPM6ujuirJeD1czM7Rmv-ElcFer8HSFfrtHjA"}},"type":"DEPLOY","releaseTime":"2024-01-05T18:58:16.768Z","releaseUser":{"email":"Anemoiapictures@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIDGJFQ3CPM6ujuirJeD1czM7Rmv-ElcFer8HSFfrtHjA"}}
+[info] +  hosting[firelog-2df0e]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/firelog-2df0e/overview
+[info] Hosting URL: https://firelog-2df0e.web.app
