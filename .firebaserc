@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "firelog-2df0e"
+  },
+  "targets": {
+    "firelog-2df0e": {
+      "hosting": {
+        "firelog": [
+          "firelog-2df0e"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
